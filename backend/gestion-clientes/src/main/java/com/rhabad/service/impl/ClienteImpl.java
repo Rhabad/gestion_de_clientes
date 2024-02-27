@@ -52,7 +52,8 @@ public class ClienteImpl implements ClienteService {
     @Override
     @Transactional
     public void delete(Integer id) {
-
+        Cliente cliente = em.find(Cliente.class, id);
+        em.remove(cliente);
     }
 
     @Override
