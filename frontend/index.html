@@ -36,7 +36,7 @@
 
     <h1>Gestion De Clientes</h1>
 
-    <button onclick="abrirFormulario()" class="button button-agregar">Agregar Cliente</button>
+    <button onclick="agregar()" class="button button-agregar">Agregar Cliente</button>
 
     <table id="customers">
         <thead>
@@ -60,6 +60,7 @@
                 <a onclick="cerrarModal()" href="#" class="btn-close closemodale" aria-hidden="true">&times;</a>
             </div>
             <div class="modal-body">
+                <input id="txtId" type="hidden" placeholder="ID" size="20" /><br>
                 <input id="txtNombre" type="text" placeholder="Nombre" size="20" /><br>
                 <input id="txtApellido" type="text" placeholder="Apellido" size="20" /><br>
                 <input id="txtEmail" type="text" placeholder="Email" size="20" /><br>

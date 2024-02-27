@@ -63,6 +63,11 @@ async function save() {
         telefono: document.getElementById('txtTelefono').value
     }
 
+    let id = document.getElementById('txtId').value
+    if (id != '') {
+        data.id = id;
+    }
+
     let url = `${url_api}/cliente`;
     await fetch(url, {
         "method": 'POST',
@@ -79,6 +84,7 @@ function edit(id) {
     abrirFormulario();
     let cliente = clientes.find(x => x.id == id);
 
+    document.getElementById('txtId').value = cliente.id;
     document.getElementById('txtNombre').value = cliente.nombre;
     document.getElementById('txtApellido').value = cliente.apellido;
     document.getElementById('txtEmail').value = cliente.email;
