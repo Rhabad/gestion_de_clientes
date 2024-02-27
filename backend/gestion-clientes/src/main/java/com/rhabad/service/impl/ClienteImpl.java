@@ -59,6 +59,18 @@ public class ClienteImpl implements ClienteService {
     @Override
     @Transactional
     public boolean update(Integer id, ClienteDto clienteDto) {
+        Cliente cliente = em.find(Cliente.class, id);
+
+        if (cliente != null){
+            cliente.setNombre(clienteDto.getNombre());
+            cliente.setApellido(clienteDto.getApellido());
+            cliente.setEmail(clienteDto.getEmail());
+            cliente.setTelefono(clienteDto.getTelefono());
+
+            em.merge(cliente);
+            return true;
+        }
+
         return false;
     }
 }

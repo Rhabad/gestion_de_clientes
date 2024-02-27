@@ -36,4 +36,14 @@ public class ClienteController {
         return new ResponseEntity<>(HttpStatus.NO_CONTENT);
     }
 
+    @RequestMapping(value = "/cliente/{id}", method = RequestMethod.PUT)
+    public ResponseEntity<?> update(@PathVariable Integer id, @RequestBody ClienteDto clienteDto){
+        boolean response = clienteService.update(id, clienteDto);
+
+        if (response){
+            return new ResponseEntity<>(HttpStatus.OK);
+        }
+        return new ResponseEntity<>(HttpStatus.INTERNAL_SERVER_ERROR);
+    }
+
 }
