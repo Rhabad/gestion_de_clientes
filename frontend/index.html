@@ -36,7 +36,7 @@
 
     <h1>Gestion De Clientes</h1>
 
-    <button onclick="agregarCliente()" class="button button-agregar">Agregar Cliente</button>
+    <button onclick="abrirFormulario()" class="button button-agregar">Agregar Cliente</button>
 
     <table id="customers">
         <thead>
@@ -47,14 +47,7 @@
             <th>Acciones</th>
         </thead>
         <tbody>
-            <td>nicoadfadfadfasdf</td>
-            <td>asadfasdfasdfasdfadsfadfd</td>
-            <td>qweadfadfasdfasdfadfadfadf</td>
-            <td>1212adfadfasdfadf</td>
-            <td>
-                <button class="button button-editar">Editar</button>
-                <button class="button button-eliminar">Eliminar</button>
-            </td>
+
         </tbody>
     </table>
 
@@ -67,15 +60,15 @@
                 <a onclick="cerrarModal()" href="#" class="btn-close closemodale" aria-hidden="true">&times;</a>
             </div>
             <div class="modal-body">
-                <input type="text" name="u" placeholder="Nombre" size="20" /><br>
-                <input type="text" name="u" placeholder="Apellido" size="20" /><br>
-                <input type="text" name="u" placeholder="Email" size="20" /><br>
-                <input type="text" name="u" placeholder="Telefono" size="20" /><br>
+                <input id="txtNombre" type="text" placeholder="Nombre" size="20" /><br>
+                <input id="txtApellido" type="text" placeholder="Apellido" size="20" /><br>
+                <input id="txtEmail" type="text" placeholder="Email" size="20" /><br>
+                <input id="txtTelefono" type="text" placeholder="Telefono" size="20" /><br>
             </div>
             <div class="modal-footer">
 
 
-                <a href="#" class="btn" id="btn_ingresar">Guardar</a>
+                <a onclick="save()" href="#" class="btn" id="btn_ingresar">Guardar</a>
             </div>
         </div>
     </div>
@@ -84,6 +77,7 @@
 
     <script src="updateMenu.js"></script>
     <script src="script.js"></script>
+    <script src="conectarAAPI.js"></script>
 </body>
 
 </html>

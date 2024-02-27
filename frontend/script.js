@@ -1,4 +1,4 @@
-function agregarCliente() {
+function abrirFormulario() {
     let htmlModal = document.getElementById('modal');
     htmlModal.setAttribute('class', 'modale opened');
 }
