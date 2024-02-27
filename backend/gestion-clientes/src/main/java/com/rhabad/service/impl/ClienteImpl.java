@@ -40,7 +40,13 @@ public class ClienteImpl implements ClienteService {
     @Override
     @Transactional
     public void save(ClienteDto clienteDto) {
-
+        Cliente cliente = Cliente.builder()
+                .nombre(clienteDto.getNombre())
+                .apellido(clienteDto.getApellido())
+                .email(clienteDto.getEmail())
+                .telefono(clienteDto.getTelefono())
+                .build();
+        em.persist(cliente);
     }
 
     @Override
