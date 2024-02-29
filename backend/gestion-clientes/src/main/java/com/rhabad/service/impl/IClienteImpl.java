@@ -2,7 +2,7 @@ package com.rhabad.service.impl;
 
 import com.rhabad.models.dto.ClienteDto;
 import com.rhabad.models.entity.Cliente;
-import com.rhabad.service.ClienteService;
+import com.rhabad.service.ICliente;
 import jakarta.persistence.EntityManager;
 import jakarta.persistence.PersistenceContext;
 import org.springframework.stereotype.Repository;
@@ -12,7 +12,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 @Repository
-public class ClienteImpl implements ClienteService {
+public class IClienteImpl implements ICliente {
 
     @PersistenceContext
     private EntityManager em;
